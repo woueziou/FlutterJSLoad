@@ -123,6 +123,7 @@ class _MyHomePageState extends State<MyHomePage> {
     return JavascriptChannel(
         name: "showDialog",
         onMessageReceived: (message) {
+          // message.
           print(message.message);
           ScaffoldMessenger.of(context).showSnackBar(snackBar);
           // showDialog(
