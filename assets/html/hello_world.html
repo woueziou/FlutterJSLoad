@@ -1,0 +1,27 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hello World</title>
+  </head>
+  <body>
+    <center>Hello world</center>
+    <!-- <button onclick="createTextBox({'inputType': 'text', 'name': 'FirstName'})">
+      Generate
+    </button> -->
+    <p id="place"></p>
+    <script type="text/javascript">
+      function showModal() {
+        showDialog.postMessage("Done");
+      }
+      //{inputType/name}
+      function createTextBox(params) {
+        document.getElementById(
+          "place"
+        ).innerHTML = `<label for="${params.name}">${params.name}:</label><input type="${params.inputType}" id="${params.name}" name="${params.name}">`;
+        showModal();
+      }
+    </script>
+  </body>
+</html>
